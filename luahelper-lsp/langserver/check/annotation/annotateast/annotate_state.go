@@ -54,6 +54,7 @@ type AnnotateFieldState struct {
 	FieldScopeType FieldScopeType // 属性的类型 public、protected、private
 	FieldColonType FieldColonType // 属性是否为：
 	FiledType      Type           // 成员对应属性
+	IsOptional     bool           // 这个参数是否为可选的。例如 ---@field one? number ; 参数后面跟？表示参数是可选的
 	Comment        string         // 其他所有的注释内容
 	CommentLoc     lexer.Location // 注释的位置信息
 }
